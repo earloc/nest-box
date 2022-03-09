@@ -1,10 +1,10 @@
 {
   "name": "nest-box",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "playground for Nest",
+  "author": "earloc@live.de",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
