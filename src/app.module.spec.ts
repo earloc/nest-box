@@ -41,9 +41,11 @@ describe('AppModule (e2e)', () => {
       .send({
         invalid: 'value'
       })
-      .expect(500)
+      .expect(400)
       .expect( {
-        content: 'is required'
+        statusCode: 400,
+        message: ['content should not be empty'],
+        error: 'Bad Request'
       });
   });
 

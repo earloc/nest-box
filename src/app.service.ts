@@ -9,7 +9,7 @@ export class AppService {
   getValidPingUntyped(content: string) : any {
     return {
       ping: content,
-      pong: content.split('').reverse().join('')
+      pong: content?.split('').reverse().join('')
     }
   }
 }
