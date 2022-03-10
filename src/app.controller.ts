@@ -16,7 +16,15 @@ export class AppController {
   postPing(
     @Body() ping: PostPingRequest
   ): PostPingResponse {
-    const pongResult = this.appService.getValidPingUntyped(ping.content);
+    const pongResult = this.appService.getValidPongResponse(ping.content);
+
+    return pongResult;
+  }
+
+  @Get('/ping/invalid-response')
+  getPingInvalidResponse(
+  ): PostPingResponse {
+    const pongResult = this.appService.getInvalidPongResponse();
 
     return pongResult;
   }

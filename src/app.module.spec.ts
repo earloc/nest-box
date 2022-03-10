@@ -49,5 +49,11 @@ describe('AppModule (e2e)', () => {
       });
   });
 
+  it('/ping/invalid-response (GET) - invalid response', () => {
+    return request(app.getHttpServer())
+      .get('/ping/invalid-response')
+      .expect(500);
+  });
+
   
 });
