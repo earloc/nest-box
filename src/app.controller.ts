@@ -25,7 +25,7 @@ export class AppController {
   getPingInvalidResponse(
   ): PostPingResponse {
     const pongResult = this.appService.getInvalidPongResponse();
-
+    // pongResult gets not validated that it conforms to PostPingResponse, lacking output-sanitizing
     return pongResult;
   }
 }
